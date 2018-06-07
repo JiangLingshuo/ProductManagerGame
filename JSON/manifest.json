@@ -1,0 +1,7 @@
+{
+  "name": "Project Manager Game",
+  "short_name": "Project Manager Game",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "orientation": "portrait"
+}

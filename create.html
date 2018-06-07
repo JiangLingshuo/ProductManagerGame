@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--
+Copyright
+-->
+<html>
+
+<head>
+  <!--Beginning of head sections-->
+  <!--Charset-->
+  <meta charset="utf-8">
+  <!--Viewing on broswers-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Title-->
+  <title>Project Manager Game</title>
+  <!--Icon-->
+  <link rel="icon" href="images/icon.png">
+  <!--XComplete-->
+  <!--Link to Bootstrap Templates-->
+  <link href="https://code.getmdl.io/1.1.3/material.orange-indigo.min.css">
+  <!--Link for Web Application Manifest-->
+  <link rel="manifest" href="JSON/manifest.json">
+  <!--Link for Material Design Lite-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-amber.min.css" />
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <!--Link to google library for fonts-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+  <!--Link to local stylesheet-->
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+
+  <!--Script-->
+  <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  <script src="scripts/main.js"></script>
+
+
+  <!--Customization of different platforms-->
+  <!--End of head sections-->
+</head>
+
+<body>
+
+  <!-- Uses a header that contracts as the page scrolls down. -->
+  <style>
+    .demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type {
+      padding-right: 0;
+    }
+  </style>
+
+  <div class="demo-layout-waterfall mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header mdl-layout__header--waterfall">
+      <!-- Top row, always visible -->
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title"><h4><b>Project Manager Game</b></h4></span>
+
+        <div class="mdl-layout-spacer"></div>
+        <div id="user-container">
+          <!--Hidden under JS Completion-->
+          <div hidden id="user-pic"></div>
+          <div hidden id="user-name"></div>
+          <button hidden id="sign-out" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
+      Sign-out
+        </button>
+          <button id="sign-in" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
+          <i class="material-icons">account_circle</i>Sign-in with Google
+        </button>
+        </div>
+
+      </div>
+      <!-- Bottom row, not visible on scroll -->
+      <div class="mdl-layout__header-row">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+          <label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp">
+          <i class="material-icons">search</i>
+        </label>
+          <div class="mdl-textfield__expandable-holder">
+            <input class="mdl-textfield__input" type="text" name="sample" id="waterfall-exp" value placeholder="Search for tips for this game!">
+          </div>
+        </div>
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation -->
+        <nav class="mdl-navigation">
+          <a class="top-link mdl-navigation__link" href="join.html">Join in a game</a>
+          <a class="top-link mdl-navigation__link" href="create.html">create a game room</a>
+          <a class="top-link mdl-navigation__link" href="about.html">About the game</a>
+          <a class="top-link mdl-navigation__link" href="instructions.html">Instructions</a>
+          <a class="top-link mdl-navigation__link" href="report.html">Report to us</a>
+        </nav>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Let's Begin!</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="join.html">Join in a game</a>
+        <a class="mdl-navigation__link" href="create.html">create a game room</a>
+        <a class="mdl-navigation__link" href="about.html">About the game</a>
+        <a class="mdl-navigation__link" href="instructions.html">Instructions</a>
+        <a class="mdl-navigation__link" href="report.html">Report to us</a>
+      </nav>
+    </div>
+    <main class="mdl-layout__content">
+      <div id="createGame"></div>
+
+      <script type="text/jsx" src="scripts/createGame.js"></script>
+    </main>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
